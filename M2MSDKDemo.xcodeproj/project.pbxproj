@@ -15,6 +15,13 @@
 		1B2D4EA51F613FC000B6801F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B2D4EA41F613FC000B6801F /* Assets.xcassets */; };
 		1B2D4EA81F613FC100B6801F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B2D4EA61F613FC100B6801F /* LaunchScreen.storyboard */; };
 		1B2D4EB31F613FC100B6801F /* M2MSDKDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B2D4EB21F613FC100B6801F /* M2MSDKDemoUITests.m */; };
+		1B2D4EC11F613FFE00B6801F /* M2MSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B2D4EBE1F613FFE00B6801F /* M2MSDK.framework */; };
+		1B2D4EC21F613FFE00B6801F /* two.caf in Resources */ = {isa = PBXBuildFile; fileRef = 1B2D4EC01F613FFE00B6801F /* two.caf */; };
+		1B2D4EC51F61404B00B6801F /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B2D4EC41F61404B00B6801F /* AdSupport.framework */; };
+		1B2D4EC71F61405D00B6801F /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B2D4EC61F61405D00B6801F /* CoreBluetooth.framework */; };
+		1B2D4EC91F61406B00B6801F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B2D4EC81F61406B00B6801F /* CoreLocation.framework */; };
+		1B2D4ECB1F61407D00B6801F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B2D4ECA1F61407D00B6801F /* SystemConfiguration.framework */; };
+		1B2D4ECD1F61408800B6801F /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B2D4ECC1F61408800B6801F /* CoreTelephony.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +49,15 @@
 		1B2D4EAE1F613FC100B6801F /* M2MSDKDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = M2MSDKDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B2D4EB21F613FC100B6801F /* M2MSDKDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = M2MSDKDemoUITests.m; sourceTree = "<group>"; };
 		1B2D4EB41F613FC100B6801F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B2D4EBE1F613FFE00B6801F /* M2MSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = M2MSDK.framework; sourceTree = "<group>"; };
+		1B2D4EC01F613FFE00B6801F /* two.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = two.caf; sourceTree = "<group>"; };
+		1B2D4EC41F61404B00B6801F /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		1B2D4EC61F61405D00B6801F /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		1B2D4EC81F61406B00B6801F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		1B2D4ECA1F61407D00B6801F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		1B2D4ECC1F61408800B6801F /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		1B2D4ECE1F61551600B6801F /* M2MSDKDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = M2MSDKDemo.entitlements; sourceTree = "<group>"; };
+		1BDA22931F627CD7005C9AE4 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +65,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B2D4ECD1F61408800B6801F /* CoreTelephony.framework in Frameworks */,
+				1B2D4ECB1F61407D00B6801F /* SystemConfiguration.framework in Frameworks */,
+				1B2D4EC91F61406B00B6801F /* CoreLocation.framework in Frameworks */,
+				1B2D4EC71F61405D00B6801F /* CoreBluetooth.framework in Frameworks */,
+				1B2D4EC51F61404B00B6801F /* AdSupport.framework in Frameworks */,
+				1B2D4EC11F613FFE00B6801F /* M2MSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +90,7 @@
 				1B2D4E941F613FC000B6801F /* M2MSDKDemo */,
 				1B2D4EB11F613FC100B6801F /* M2MSDKDemoUITests */,
 				1B2D4E931F613FC000B6801F /* Products */,
+				1B2D4EC31F61404B00B6801F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,6 +106,7 @@
 		1B2D4E941F613FC000B6801F /* M2MSDKDemo */ = {
 			isa = PBXGroup;
 			children = (
+				1B2D4ECE1F61551600B6801F /* M2MSDKDemo.entitlements */,
 				1B2D4E981F613FC000B6801F /* AppDelegate.h */,
 				1B2D4E991F613FC000B6801F /* AppDelegate.m */,
 				1B2D4E9B1F613FC000B6801F /* ViewController.h */,
@@ -92,7 +116,9 @@
 				1B2D4EA61F613FC100B6801F /* LaunchScreen.storyboard */,
 				1B2D4EA91F613FC100B6801F /* Info.plist */,
 				1B2D4EA11F613FC000B6801F /* M2MSDKDemo.xcdatamodeld */,
+				1B2D4EBD1F613FFE00B6801F /* M2MSDK.embeddedframework */,
 				1B2D4E951F613FC000B6801F /* Supporting Files */,
+				1BDA22931F627CD7005C9AE4 /* Constants.h */,
 			);
 			path = M2MSDKDemo;
 			sourceTree = "<group>";
@@ -112,6 +138,35 @@
 				1B2D4EB41F613FC100B6801F /* Info.plist */,
 			);
 			path = M2MSDKDemoUITests;
+			sourceTree = "<group>";
+		};
+		1B2D4EBD1F613FFE00B6801F /* M2MSDK.embeddedframework */ = {
+			isa = PBXGroup;
+			children = (
+				1B2D4EBE1F613FFE00B6801F /* M2MSDK.framework */,
+				1B2D4EBF1F613FFE00B6801F /* M2MSDKResources */,
+			);
+			path = M2MSDK.embeddedframework;
+			sourceTree = "<group>";
+		};
+		1B2D4EBF1F613FFE00B6801F /* M2MSDKResources */ = {
+			isa = PBXGroup;
+			children = (
+				1B2D4EC01F613FFE00B6801F /* two.caf */,
+			);
+			path = M2MSDKResources;
+			sourceTree = "<group>";
+		};
+		1B2D4EC31F61404B00B6801F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1B2D4ECC1F61408800B6801F /* CoreTelephony.framework */,
+				1B2D4ECA1F61407D00B6801F /* SystemConfiguration.framework */,
+				1B2D4EC81F61406B00B6801F /* CoreLocation.framework */,
+				1B2D4EC61F61405D00B6801F /* CoreBluetooth.framework */,
+				1B2D4EC41F61404B00B6801F /* AdSupport.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,6 +220,11 @@
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = UKBNTL7HA9;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					1B2D4EAD1F613FC100B6801F = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -199,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B2D4EA81F613FC100B6801F /* LaunchScreen.storyboard in Resources */,
+				1B2D4EC21F613FFE00B6801F /* two.caf in Resources */,
 				1B2D4EA51F613FC000B6801F /* Assets.xcassets in Resources */,
 				1B2D4EA01F613FC000B6801F /* Main.storyboard in Resources */,
 			);
@@ -359,7 +420,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = M2MSDKDemo/M2MSDKDemo.entitlements;
 				DEVELOPMENT_TEAM = UKBNTL7HA9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/M2MSDKDemo/M2MSDK.embeddedframework",
+				);
 				INFOPLIST_FILE = M2MSDKDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = geomatix.cz.M2MSDKDemo;
@@ -371,7 +437,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = M2MSDKDemo/M2MSDKDemo.entitlements;
 				DEVELOPMENT_TEAM = UKBNTL7HA9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/M2MSDKDemo/M2MSDK.embeddedframework",
+				);
 				INFOPLIST_FILE = M2MSDKDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = geomatix.cz.M2MSDKDemo;
@@ -422,6 +493,7 @@
 				1B2D4EB91F613FC100B6801F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1B2D4EBA1F613FC100B6801F /* Build configuration list for PBXNativeTarget "M2MSDKDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -430,6 +502,7 @@
 				1B2D4EBC1F613FC100B6801F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
