@@ -12,9 +12,14 @@
 #import "Constants.h"
 
 @interface ViewController () <M2MServiceDelegate>
+
 @property (weak, nonatomic) IBOutlet UIButton *initializingButton;
 @property (weak, nonatomic) IBOutlet UIImageView *sdkInitIndicator;
 
+@property (weak, nonatomic) IBOutlet UIView *configurationView;
+@property (weak, nonatomic) IBOutlet UILabel *pushOptedStatus;
+@property (weak, nonatomic) IBOutlet UILabel *geofencingStatus;
+@property (weak, nonatomic) IBOutlet UILabel *stoppedStatus;
 
 
 - (IBAction)initializationButtonClicked:(id)sender;
@@ -35,8 +40,11 @@
 	self.initializingButton.tintColor = [UIColor whiteColor];
 	self.initializingButton.titleLabel.font = [UIFont systemFontOfSize:22.0 weight:0.75];
 	
-	
 	self.sdkInitIndicator.alpha = 0.0;
+	l = self.configurationView.layer;
+	l.borderColor = [UIColor greenColor].CGColor;
+	l.cornerRadius = 5.0;
+	self.configurationView.alpha = 0;
 	
 }
 
@@ -52,19 +60,29 @@
 	[M2MBeaconMonitor initWithApplicationUuid:APPLICATION_UUID andDelegate:self];
 	[M2MBeaconMonitor startMonitoringWithDelegate:self];
 	[M2MBeaconMonitor sharedInstance].userId = USER_ID;
+	
+	M2MConfig *config = [M2MBeaconMonitor getM2MConfig];
+	
+	self.pushOptedStatus.text = (config.isOptedInForPush ? @"YES" : @"NO");
+	self.geofencingStatus.text = (config.isOptedInForGeofencing ? @"YES" : @"NO");
+	self.stoppedStatus.text = (config.isStopped ? @"YES" : @"NO");
+	
+	self.configurationView.alpha = 1.0;
+	
+	
 }
 
 #pragma mark - M2MServiceDelegate delegate methods -
 
 -(void)onErrorWithCode:(M2M_ERROR_CODES)code andMessage:(NSString*)message forRequest:(M2M_REQUEST_TYPE)type
 {
-	NSLog(@"error code - %ld  message - %@ request - %ld",
+	NSLog(@"error code - %d  message - %@ request - %u",
 		  code, message, type);
 }
 
 -(void)checkInDidFailWithCode:(M2M_ERROR_CODES)code andMessage:(NSString*)message
 {
-	NSLog(@"errCode - %ld message - %@",code, message);
+	NSLog(@"errCode - %d message - %@",code, message);
 }
 
 -(void)didGetAvailableOpps:(NSDictionary*)opps
