@@ -61,6 +61,9 @@
 	[M2MBeaconMonitor startMonitoringWithDelegate:self];
 	[M2MBeaconMonitor sharedInstance].userId = USER_ID;
 	
+//	[M2MBeaconMonitor sharedInstance].optInForGeofencing = NO;
+//	[M2MBeaconMonitor updateServiceWithDelegate:self];
+	
 	M2MConfig *config = [M2MBeaconMonitor getM2MConfig];
 	
 	self.pushOptedStatus.text = (config.isOptedInForPush ? @"YES" : @"NO");
@@ -90,5 +93,17 @@
 	NSLog(@"opps = %@",opps);
 }
 
+
+-(void)onM2mDecisionWithData:(NSDictionary*)dict
+{
+	NSLog(@"Decision data - %@",dict);
+}
+
+- (BOOL) respondsToSelector:(SEL)aSelector
+{
+	NSString *methodName = NSStringFromSelector(aSelector);
+	NSLog(@">>> respondsToSelector:%@",methodName);
+	return [super respondsToSelector:aSelector];
+}
 
 @end
